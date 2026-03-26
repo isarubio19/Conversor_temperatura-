@@ -1,0 +1,35 @@
+#include <stdio.h>   // Biblioteca para entrada e saída (printf, scanf)
+
+// Declaração da função que converte Fahrenheit para Celsius
+float converterParaCelsius(float F);
+
+int main(){
+
+    float F, C;   
+
+    // Loop infinito para permitir várias conversões sem encerrar o programa
+    while(1){
+
+        printf("Digite a temperatura em F:\n"); 
+        scanf("%f", &F);
+
+        // Chama a função de conversão
+        C = converterParaCelsius(F);
+
+        // Exibe o resultado com duas casas decimais
+        printf("Temperatura em C: %.2f\n", C);
+    }
+
+    return 0;
+}
+
+// Função responsável por converter Fahrenheit para Celsius
+float converterParaCelsius(float F){
+
+    float C;  // Variável para armazenar o resultado
+
+    // Fórmula de conversão: C = (5/9) * (F - 32)
+    C = 5.0/9.0 * (F - 32.0);
+
+    return C; 
+}
